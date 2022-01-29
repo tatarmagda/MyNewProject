@@ -33,7 +33,10 @@ class _MyHomePageState extends State<MyHomePage> {
                   width: 200.0,
                   color: Colors.blue[200],
                   child: TextButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      setState(() => index = 0);
+                      Navigator.of(context).pop();
+                    },
                     child: MyTextWidget(
                       size: 20.0,
                       color: Colors.red[300],
@@ -48,7 +51,10 @@ class _MyHomePageState extends State<MyHomePage> {
                   width: 200.0,
                   color: Colors.blue[400],
                   child: TextButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      setState(() => index = 1);
+                      Navigator.of(context).pop();
+                    },
                     child: MyTextWidget(
                       size: 20.0,
                       color: Colors.red[600],
@@ -63,7 +69,10 @@ class _MyHomePageState extends State<MyHomePage> {
                   width: 200.0,
                   color: Colors.blue[900],
                   child: TextButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      setState(() => index = 2);
+                      Navigator.of(context).pop();
+                    },
                     child: MyTextWidget(
                       size: 20.0,
                       color: Colors.red[100],
