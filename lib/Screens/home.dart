@@ -22,43 +22,96 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: myScreens[index],
-      appBar: AppBar(
-        centerTitle: true,
-        title: MyTextWidget(
-          text: "Home Page",
-          color: Colors.white54,
+    return SafeArea(
+      child: Scaffold(
+        drawer: Drawer(
+          child: Column(
+            children: [
+              Padding(
+                padding: const EdgeInsets.all(50.0),
+                child: Container(
+                  width: 200.0,
+                  color: Colors.blue[200],
+                  child: TextButton(
+                    onPressed: () {},
+                    child: MyTextWidget(
+                      size: 20.0,
+                      color: Colors.red[300],
+                      text: "My Home Page",
+                    ),
+                  ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(50.0),
+                child: Container(
+                  width: 200.0,
+                  color: Colors.blue[400],
+                  child: TextButton(
+                    onPressed: () {},
+                    child: MyTextWidget(
+                      size: 20.0,
+                      color: Colors.red[600],
+                      text: "Calculator",
+                    ),
+                  ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(50.0),
+                child: Container(
+                  width: 200.0,
+                  color: Colors.blue[900],
+                  child: TextButton(
+                    onPressed: () {},
+                    child: MyTextWidget(
+                      size: 20.0,
+                      color: Colors.red[100],
+                      text: "To Do App",
+                    ),
+                  ),
+                ),
+              ),
+            ],
+          ),
         ),
-      ),
-      bottomNavigationBar: BottomAppBar(
-        child: Row(
-          children: [
-            InkWell(
-              child: Icon(Icons.home),
-              onTap: () {
-                setState(() {
-                  index = 0;
-                });
-              },
-            ),
-            IconButton(
-              onPressed: () {
-                setState(() {
-                  index = 1;
-                });
-              },
-              icon: Icon(Icons.search),
-            ),
-            InkWell(
-              child: Icon(Icons.check),
-              onTap: () {
-                setState(() {
-                  index = 2;
-                });
-              },
-            ),
-          ],
+        body: myScreens[index],
+        appBar: AppBar(
+          centerTitle: true,
+          title: MyTextWidget(
+            text: "Home Page",
+            color: Colors.white54,
+          ),
+        ),
+        bottomNavigationBar: BottomAppBar(
+          child: Row(
+            children: [
+              InkWell(
+                child: Icon(Icons.home),
+                onTap: () {
+                  setState(() {
+                    index = 0;
+                  });
+                },
+              ),
+              IconButton(
+                onPressed: () {
+                  setState(() {
+                    index = 1;
+                  });
+                },
+                icon: Icon(Icons.search),
+              ),
+              InkWell(
+                child: Icon(Icons.check),
+                onTap: () {
+                  setState(() {
+                    index = 2;
+                  });
+                },
+              ),
+            ],
+          ),
         ),
       ),
     );

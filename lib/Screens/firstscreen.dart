@@ -49,7 +49,7 @@ class _FirstScreenState extends State<FirstScreen> {
             });
           },
           child: Text("Click me"),
-          color: Colors.blue[900],
+          color: colorList[index + 1],
           shape: StadiumBorder(),
         )
       ],
