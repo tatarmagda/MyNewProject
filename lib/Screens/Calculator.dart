@@ -109,28 +109,6 @@ class _CalcpageState extends State<Calcpage> {
   Widget build(BuildContext context) {
     return Scaffold(
         backgroundColor: Colors.orange[50],
-        appBar: AppBar(
-          elevation: 0,
-          backgroundColor: Colors.transparent,
-          title: MyTextWidget(
-            color: Colors.black,
-            text: "Calculator",
-            size: 30.0,
-          ),
-          centerTitle: true,
-          leading: const Icon(
-            Icons.menu,
-            size: 40.0,
-            color: Colors.black,
-          ),
-          actions: const [
-            Icon(
-              Icons.history,
-              size: 40.0,
-              color: Colors.black,
-            ),
-          ],
-        ),
         body: Padding(
           padding: const EdgeInsets.all(8.0),
           child: Center(

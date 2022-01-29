@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:mynewproject/Screens/Calculator.dart';
+import 'package:mynewproject/Screens/ToDoApp.dart';
+import 'package:mynewproject/Screens/firstscreen.dart';
 import 'package:mynewproject/Widgets/text_widget.dart';
 import 'package:cupertino_icons/cupertino_icons.dart';
 
@@ -11,17 +14,10 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   List<Widget> myScreens = [
-    MyTextWidget(
-      text: "lol",
-    ),
-    MyTextWidget(
-      text: "lol2",
-    ),
-    MyTextWidget(
-      text: "lol3",
-    )
+    FirstScreen(),
+    Calcpage(),
+    ToDoAppPage(),
   ];
-
   int index = 0;
 
   @override
