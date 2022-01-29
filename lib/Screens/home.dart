@@ -25,63 +25,74 @@ class _MyHomePageState extends State<MyHomePage> {
     return SafeArea(
       child: Scaffold(
         drawer: Drawer(
-          child: Column(
-            children: [
-              Padding(
-                padding: const EdgeInsets.all(50.0),
-                child: Container(
-                  width: 200.0,
-                  color: Colors.blue[200],
-                  child: TextButton(
-                    onPressed: () {
-                      setState(() => index = 0);
-                      Navigator.of(context).pop();
-                    },
-                    child: MyTextWidget(
-                      size: 20.0,
-                      color: Colors.red[300],
-                      text: "My Home Page",
+          child: Container(
+            decoration: BoxDecoration(
+                gradient: LinearGradient(
+              begin: Alignment.topRight,
+              end: Alignment.bottomLeft,
+              colors: [
+                Colors.blue,
+                Colors.red,
+              ],
+            )),
+            child: Column(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.all(50.0),
+                  child: Container(
+                    width: 200.0,
+                    color: Colors.blue[200],
+                    child: TextButton(
+                      onPressed: () {
+                        setState(() => index = 0);
+                        Navigator.of(context).pop();
+                      },
+                      child: MyTextWidget(
+                        size: 20.0,
+                        color: Colors.red[300],
+                        text: "My Home Page",
+                      ),
                     ),
                   ),
                 ),
-              ),
-              Padding(
-                padding: const EdgeInsets.all(50.0),
-                child: Container(
-                  width: 200.0,
-                  color: Colors.blue[400],
-                  child: TextButton(
-                    onPressed: () {
-                      setState(() => index = 1);
-                      Navigator.of(context).pop();
-                    },
-                    child: MyTextWidget(
-                      size: 20.0,
-                      color: Colors.red[600],
-                      text: "Calculator",
+                Padding(
+                  padding: const EdgeInsets.all(50.0),
+                  child: Container(
+                    width: 200.0,
+                    color: Colors.blue[400],
+                    child: TextButton(
+                      onPressed: () {
+                        setState(() => index = 1);
+                        Navigator.of(context).pop();
+                      },
+                      child: MyTextWidget(
+                        size: 20.0,
+                        color: Colors.red[600],
+                        text: "Calculator",
+                      ),
                     ),
                   ),
                 ),
-              ),
-              Padding(
-                padding: const EdgeInsets.all(50.0),
-                child: Container(
-                  width: 200.0,
-                  color: Colors.blue[900],
-                  child: TextButton(
-                    onPressed: () {
-                      setState(() => index = 2);
-                      Navigator.of(context).pop();
-                    },
-                    child: MyTextWidget(
-                      size: 20.0,
-                      color: Colors.red[100],
-                      text: "To Do App",
+                Padding(
+                  padding: const EdgeInsets.all(50.0),
+                  child: Container(
+                    width: 200.0,
+                    color: Colors.blue[900],
+                    child: TextButton(
+                      onPressed: () {
+                        setState(() => index = 2);
+                        Navigator.of(context).pop();
+                      },
+                      child: MyTextWidget(
+                        size: 20.0,
+                        color: Colors.red[100],
+                        text: "To Do App",
+                      ),
                     ),
                   ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
         ),
         body: myScreens[index],
